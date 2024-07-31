@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import './index.css';
 import Root from './layout/Root';
+import Add from './pages/Add';
 import Home from './pages/Home';
 import Update from './pages/Update';
 
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         path: "/update/:id",
         element: <Update></Update>,
         loader: ({params})=> fetch(`http://localhost:3000/${params.id}`)
+      },
+      {
+        path: "/add",
+        element: <Add></Add>,
       }
     ]
   },

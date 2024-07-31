@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="grid grid-cols-3 gap-6 mt-8">
       {craft.map(c => (
-        <CraftCard key={c._id} craft={c} setCraft={setCraft} crafts={crafts} />
+        <CraftCard key={c._id} craftt={c} setCraft={setCraft} craft={craft} />
       ))}
     </div>
   );

@@ -7,7 +7,6 @@ export default function Navbar() {
         <ul className='flex gap-16 justify-center'>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/add">Add</NavLink>
-            <NavLink to="/update">Update</NavLink>
         </ul>
     </div>
   )
