@@ -1,10 +1,35 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import './index.css';
+import Root from './layout/Root';
+import Home from './pages/Home';
+import Update from './pages/Update';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root></Root>,
+    children:[
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: ()=>fetch("http://localhost:3000/craft"),
+      },
+      {
+        path: "/update/:id",
+        element: <Update></Update>,
+        loader: ({params})=> fetch(`http://localhost:3000/${params.id}`)
+      }
+    ]
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )
