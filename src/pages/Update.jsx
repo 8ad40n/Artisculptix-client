@@ -17,7 +17,7 @@ export default function Update() {
 
     const updateCraft = { title, description, price, category, image };
 
-    fetch(`http://localhost:3000/craft/${_id}`, {
+    fetch(`https://artisculptix-server.vercel.app/craft/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

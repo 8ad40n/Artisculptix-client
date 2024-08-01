@@ -13,7 +13,7 @@ export default function Add() {
 
     const newCraft = { title, description, price, category, image };
 
-    fetch("http://localhost:3000/craft", {
+    fetch("https://artisculptix-server.vercel.app/craft", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

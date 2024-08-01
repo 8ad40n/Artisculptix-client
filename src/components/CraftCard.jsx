@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function CraftCard({ craft, craftt, setCraft }) {
   const { _id, title, description, price, image, category } = craftt;
   const handleDelete = (_id)=>{
-    fetch(`http://localhost:3000/craft/${_id}`,
+    fetch(`https://artisculptix-server.vercel.app/craft/${_id}`,
       {
         method: "DELETE",
       }

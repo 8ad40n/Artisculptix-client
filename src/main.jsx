@@ -18,12 +18,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: ()=>fetch("http://localhost:3000/craft"),
+        loader: ()=>fetch("https://artisculptix-server.vercel.app/craft"),
       },
       {
         path: "/update/:id",
         element: <Update></Update>,
-        loader: ({params})=> fetch(`http://localhost:3000/craft/${params.id}`)
+        loader: ({params})=> fetch(`https://artisculptix-server.vercel.app/craft/${params.id}`)
       },
       {
         path: "/add",
