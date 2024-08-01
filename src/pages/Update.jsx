@@ -36,6 +36,7 @@ export default function Update() {
         alert("Failed to update craft.");
       });
   };
+  
 
   return (
     <div className="mt-8">
